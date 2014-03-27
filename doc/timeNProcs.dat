@@ -1,0 +1,8 @@
+# This file contains data collected by running matrix multiply code parallelized with openMP and MPI implementations
+# The data is entered manually
+# Achyut Panchal: 09D01002
+# ME766: Homework 1
+# Variations are with constant matrix size and number of processors varying from 1, 2, 4, 8, 12, 16, 20
+# Time taken in Seconds
+# Matrix size: 10000 X 10000
+# NProcs	Serial		OpemMP		MPI

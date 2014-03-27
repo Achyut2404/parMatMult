@@ -1,0 +1,4 @@
+Achyut Panchal: 09D01002
+ME 766: Homework 1
+
+Code contains serial, openMP and MPI impelentation of matrix multiplication in s++. "doc/" folder contains details of time taken for processes, and plots for the same. Results are generated for varying number of processors and matrix size. 

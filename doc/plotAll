@@ -1,0 +1,14 @@
+set term gif
+set output "matSize.gif"
+set xlabel "Matrix Size"
+set ylabel "Time taken (s)"
+set autoscale
+plot "timeMatSize.dat" using 1:2 title 'Serial'smooth unique, "timeMatSize.dat" using 1:3 title 'OpenMP'smooth unique, "timeMatSize.dat" using 1:4 title 'MPI' smooth unique
+
+set term gif
+set output "NProcs.gif"
+set xlabel "Number of Processors"
+set ylabel "Time taken (s)"
+set autoscale
+plot "timeNProcs.dat" using 1:2 title 'Serial'smooth unique, "timeNProcs.dat" using 1:3 title 'OpenMP'smooth unique, "timeNProcs.dat" using 1:4 title 'MPI' smooth unique
+

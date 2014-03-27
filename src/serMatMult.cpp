@@ -7,6 +7,7 @@
 
 // Import functions printMat
 void printMat(float **a, int n, int m);
+void freeMat(float **A, int n, int m);
 float** serialMatMult(float **A, float **B, int N, int M, int P);
 float** randMat1(int M, int N);
 float** randMat2(int M, int N);
@@ -48,5 +49,9 @@ int main(){
 	std::cout << "Printing C matrix" << std::endl;
 	//printMat(C,N,N);
 
+	// Free the memory
+	freeMat(A, N, N);
+	freeMat(B, N, N);
+	freeMat(C, N, N);
 	return(0);
 	}

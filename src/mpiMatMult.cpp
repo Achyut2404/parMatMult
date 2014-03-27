@@ -7,6 +7,7 @@
 #include "mpi.h"
 
 // Import functions printMat and serialMatMult
+void freeMat(float **a, int n, int m);
 void printMat(float **a, int n, int m);
 float** serialMatMult(float **A, float **B, int N, int M, int P);
 float** randMat1(int M, int N);
@@ -195,10 +196,26 @@ int main(int argc, char** argv){
 			float errMPI;
 			errMPI = matDiffMax(C,Cser,N,N);
 			std::cout << "Error between serial and MPI is " << errMPI << std::endl;
+			freeMat(Cser,N,N);
 			}
 		}
+	// Free matrices, and variables
+	if (my_PE_num==0){
+		freeMat(A,N,N);
+		freeMat(B,N,N);
+		freeMat(C,N,N);
+		}
+
+	else {
+		freeMat(BPar,N,N);
+		freeMat(APar,NPar,N);
+		freeMat(CPar,NPar,N);
+		}
+
+	delete[] parRowDat;
 	
 	MPI_Finalize();
+	
 	return(0);
 	}
 

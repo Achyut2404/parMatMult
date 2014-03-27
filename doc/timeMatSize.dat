@@ -6,3 +6,7 @@
 # Time taken in Seconds
 # NProcs = 4
 # MatSize	Serial		OpemMP		MPI
+10		0.366		0.312		1.046	`
+100		0.452		0.420		0.507
+1000		7.332		2.833		3.237
+2000		69.843		23.079		19.327

@@ -7,6 +7,15 @@
 #include<stdlib.h>
 #include<algorithm>
 
+void freeMat(float **a, int n, int m){
+	/* Frees up the memory for matrix */
+	int i, j;
+	for(i=0;i<n;i++){
+		delete[] a[i];
+		}
+	delete a;
+	}
+
 void printMat(float **a,int n, int m){
 	/* prints a N X M matrix*/
 	int i,j;

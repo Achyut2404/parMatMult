@@ -6,6 +6,7 @@
 #include <stdio.h>
 
 // Import function printMat
+void freeMat(float**a, int n, int m);
 void printMat(float **a, int n, int m);
 float** ompMatMult(float **A, float **B, int N, int M, int P);
 float** randMat1(int M, int N);
@@ -38,7 +39,11 @@ int main(){
 	
 	std::cout << "Printing matrix C" << std::endl;
 	//printMat(C,N,N);
-	
+
+	// Free martrices
+	freeMat(A,N,N);	
+	freeMat(B,N,N);	
+	freeMat(C,N,N);	
 	return(0);
 	}
 

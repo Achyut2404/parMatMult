@@ -6,6 +6,7 @@
 #include <stdio.h>
 
 //import matrix multiply and error functions
+void freeMat(float** a, int n, int m);
 float** serialMatMult(float **A, float **B, int N, int M, int P);
 float** ompMatMult(float **A, float **B, int N, int M, int P);
 float matDiffMax(float **A, float **B, int n, int m);
@@ -47,6 +48,12 @@ int main(){
 	errmp = matDiffMax(CSer,COmp,N,N);
 	std::cout << "Maximum Error in openMP is: "<< errmp << '\n';
 	
+	// Free matrix spaces
+	freeMat(A,N,N);
+	freeMat(B,N,N);
+	freeMat(CSer,N,N);
+	freeMat(COmp,N,N);
+
 	return(0);
 	}
 

@@ -2,7 +2,11 @@
 # The data is entered manually
 # Achyut Panchal: 09D01002
 # ME766: Homework 1
-# Variations are with constant matrix size and number of processors varying from 1, 2, 4, 8, 12, 16, 20
+# Variations are with constant matrix size and number of processors varying from 1, 2, 3, 4
 # Time taken in Seconds
-# Matrix size: 10000 X 10000
+# Matrix size: 2000 X 2000
 # NProcs	Serial		OpemMP		MPI
+1		69.420		84.179		69.549
+2		69.420		43.822		36.460
+3 		69.420		29.893		24.593
+4		69.420		22.688		19.438
